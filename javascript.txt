@@ -1,0 +1,68 @@
+let opcion;
+
+
+// Mostrar el menú al usuario
+alert("MENU CALCULATOR\n" +
+      "1 – Pedir al usuario su nombre y apellidos y lo muestra en la consola\n" +
+      "2 – Pedir un número y mostrar sus 10 valores siguientes\n" +
+      "3 – Calcular la media aritmética de los 100 primeros números naturales\n" +
+      "4 – Generar una tabla de multiplicar para un número\n");
+
+opcion = prompt("Introduce tu opción:");
+
+
+// Procesar la opción seleccionada
+switch (opcion) {
+  case "1":
+    // Opción 1: Pedir nombre y apellidos
+    let nombre = prompt("Introduce tu nombre:");
+    let apellido1 = prompt("Introduce tu primer apellido:");
+    let apellido2 = prompt("Introduce tu segundo apellido:");
+    console.log(nombre+" "+apellido1+" "+apellido2);
+    break;
+
+  case "2":
+    // Opción 2: Mostrar los 10 valores siguientes
+    let numero = Number(prompt("Introduce un número:"));
+    for (let i = 1; i <= 10; i++) {
+      console.log(numero + i);
+    }
+
+    break;
+
+  case "3":
+    // Opción 3: Calcular la media aritmética
+    let suma = 0;
+    for (let i = 0; i < 100; i++) {
+      suma = suma+ i;
+    }
+    let media = suma / 100;
+    console.log("La media aritmética de los 100 primeros números naturales es: "+media);
+    break;
+
+  case "4":
+    // Opción 4: Tabla de multiplicar
+    let numTabla = Number(prompt("Introduce un número para generar su tabla de multiplicar:"));
+    for (let i = 1; i <= 10; i++) {
+      console.log(numTabla+" x "+i+" = "+(numTabla*i));
+    }
+
+    break;
+
+  default:
+    // Manejo de opciones inválidas
+    console.log("Opción incorrecta. Por favor, selecciona una opción válida.");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
